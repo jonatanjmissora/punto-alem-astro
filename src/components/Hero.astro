@@ -1,11 +1,13 @@
 ---
-import { Image } from 'astro:assets';
+import { Image } from "astro:assets";
 ---
 
-<section class="hero} id="inicio">
-  
+<section class="hero" id="inicio">
   <!-- <FramerReveal options={{ from: "none", amount: "0", duration: "4" }}> -->
-    <div class="image_container"></div>
+    <div class="image_container_bg">
+      <div class="image_container">
+      </div>
+    </div>
 
   <!-- </FramerReveal> -->
 
@@ -14,7 +16,7 @@ import { Image } from 'astro:assets';
       class="logo_container}
       options={{ from: "top", duration: "2" }}
     > -->
-    <div class="logo_container" >
+    <div class="logo_container">
       <Image
         class="logo"
         src="/HeroLogo.svg"
@@ -43,22 +45,31 @@ import { Image } from 'astro:assets';
       <span>Aire Libre</span>
     </div>
     <!-- </FramerReveal> -->
-
   </div>
 </section>
-
 
 <style>
   .hero {
   height: 100vh;
-  height: 100dvh;
+  height: 100svh;
   /* background: linear-gradient(to bottom, rgb(240, 240, 255), rgb(253, 253, 255)); */
 }
 
-.image_container {
+.image_container_bg {
+  background: var(--blue);
   margin-top: var(--navbar-desktop-height);
   height: 65vh;
+  height: 65svh;
   width: 100vw;
+  position: relative;
+}
+
+.image_container {
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  position: absolute;
 }
 
 .image_container {
@@ -66,40 +77,203 @@ import { Image } from 'astro:assets';
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  animation: play 36s ease infinite;
-  animation-delay: 4s;
+  animation: play 40s linear infinite;
+  opacity: 0;
 }
 
 @keyframes play {
-  17% {
+
+  1.5% {
+    opacity: 1;
+    background: url("/portada1.webp");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+
+  13% {
+    opacity: 1;
+    background: url("/portada1.webp");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+
+  14.5% {
+    opacity: 0;
+    background: url("/portada1.webp");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+
+  /* ======================================= */
+  14.6% {
+    opacity: 0;
     background: url("/portada4.webp");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
   }
 
-  34% {
-    background: url("/portada5.webp");
+  16% {
+    opacity: 1;
+    background: url("/portada4.webp");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
   }
 
-  51% {
-    background: url("/portada8.webp");
+  30% {
+    opacity: 1;
+    background: url("/portada4.webp");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
   }
 
-  68% {
+  31.5% {
+    opacity: 0;
+    background: url("/portada4.webp");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+
+  /* ======================================= */
+  31.6% {
+    opacity: 0;
+    background: url("/portada6.webp");
+    background-repeat: no-repeat;
+    background-position: 65%;
+    background-size: cover;
+  }
+
+  33% {
+    opacity: 1;
+    background: url("/portada6.webp");
+    background-repeat: no-repeat;
+    background-position: 65%;
+    background-size: cover;
+  }
+
+  46% {
+    opacity: 1;
+    background: url("/portada6.webp");
+    background-repeat: no-repeat;
+    background-position: 65%;
+    background-size: cover;
+  }
+
+  47.5% {
+    opacity: 0;
+    background: url("/portada6.webp");
+    background-repeat: no-repeat;
+    background-position: 65%;
+    background-size: cover;
+  }
+
+  /* ======================================= */
+  47.6% {
+    opacity: 0;
+    background: url("/portada7.webp");
+    background-repeat: no-repeat;
+    background-position: 35%;
+    background-size: cover;
+  }
+
+  49% {
+    opacity: 1;
+    background: url("/portada7.webp");
+    background-repeat: no-repeat;
+    background-position: 35%;
+    background-size: cover;
+  }
+
+  63% {
+    opacity: 1;
+    background: url("/portada7.webp");
+    background-repeat: no-repeat;
+    background-position: 35%;
+    background-size: cover;
+  }
+
+  64.5% {
+    opacity: 0;
+    background: url("/portada7.webp");
+    background-repeat: no-repeat;
+    background-position: 35%;
+    background-size: cover;
+  }
+
+  /* ======================================= */
+  64.6% {
+    opacity: 0;
     background: url("/portada9.webp");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
   }
 
-  85% {
+  66% {
+    opacity: 1;
+    background: url("/portada9.webp");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+
+  80% {
+    opacity: 1;
+    background: url("/portada9.webp");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+
+  81.5% {
+    opacity: 0;
+    background: url("/portada9.webp");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+
+  /* ======================================= */
+  81.6% {
+    opacity: 0;
+    background: url("/portada10.webp");
+    background-repeat: no-repeat;
+    background-position: 65%;
+    background-size: cover;
+  }
+
+  83% {
+    opacity: 1;
+    background: url("/portada10.webp");
+    background-repeat: no-repeat;
+    background-position: 65%;
+    background-size: cover;
+  }
+
+  97% {
+    opacity: 1;
+    background: url("/portada10.webp");
+    background-repeat: no-repeat;
+    background-position: 65%;
+    background-size: cover;
+  }
+
+  99.8% {
+    opacity: 0;
+    background: url("/portada10.webp");
+    background-repeat: no-repeat;
+    background-position: 65%;
+    background-size: cover;
+  }
+
+  99.9% {
+    opacity: 0;
     background: url("/portada10.webp");
     background-repeat: no-repeat;
     background-position: center;
@@ -107,11 +281,13 @@ import { Image } from 'astro:assets';
   }
 
   100% {
+    opacity: 0;
     background: url("/portada1.webp");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
   }
+
 
 }
 
@@ -141,20 +317,10 @@ import { Image } from 'astro:assets';
 }
 
 .title {
-  /* font-size: 6rem;
-  font-weight: 300;
-  background: linear-gradient(165deg, rgb(245, 236, 170), rgb(100, 85, 9));
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent; */
   display: none;
 }
 
 .sub_title {
-  /* font-size: 1.5rem;
-  margin-bottom: 2rem;
-  color: #575757;
-  font-weight: 400; */
   display: none;
 }
 
@@ -171,27 +337,31 @@ import { Image } from 'astro:assets';
 }
 
 @media (max-width: 1400px) {
-  /* .image_container {
-    height: 65vh;
+  .image_container_bg {
+    height: 60vh;
+    height: 60svh;
   }
 
   .logo_container {
-    height: 15vw;
-  } */
+    height: 12vw;
+  }
 }
 
 @media (max-width: 760px) {
-  .image {
-    object-position: center;
+  .image_container_bg {
+    height: 50vh;
+    height: 50svh;
   }
 
   .logo_container {
-    height: 50vw;
+    height: 40vw;
+    height: 40svw;
     width: 100vw;
   }
 
   .footer span {
     margin: 0.5rem;
+    font-size: 1.25rem;
   }
 }
 </style>
