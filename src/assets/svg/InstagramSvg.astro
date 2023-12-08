@@ -1,6 +1,6 @@
-
 <svg viewBox="0.00 0.00 600.00 505.00">
-  <path fill="#CCA965" d="
+  <path
+    d="
     M 61.86 107.54
     C 81.35 62.17 122.59 29.06 171.11 19.51
     Q 178.73 18.01 186.56 16.68
@@ -48,9 +48,15 @@
     C 200.98 60.66 198.44 60.39 195.97 60.60
     Q 162.99 63.44 138.16 82.12
     Z"
-  />
-  <ellipse fill="#CCA965" cx="0.00" cy="0.00" transform="translate(427.71,125.02) rotate(0.2)" rx="16.43" ry="15.78"/>
-  <path fill="#CCA965" d="
+  ></path>
+  <ellipse
+    cx="0.00"
+    cy="0.00"
+    transform="translate(427.71,125.02) rotate(0.2)"
+    rx="16.43"
+    ry="15.78"></ellipse>
+  <path
+    d="
     M 418.63 251.81
     A 122.77 118.07 0.0 0 1 295.86 369.88
     A 122.77 118.07 0.0 0 1 173.09 251.81
@@ -63,5 +69,27 @@
     A 76.46 73.54 0.1 0 0 295.7216 325.3499
     A 76.46 73.54 0.1 0 0 372.3099 251.9434
     Z"
-  />
-  </svg>
+  ></path>
+</svg>
+
+<style>
+  svg {
+    width: 100%;
+    height: 100%;
+    transition: background 0.35s ease;
+    border-radius: 0.5rem;
+  }
+
+  svg path {
+    fill: var(--gold);
+    transition: fill 0.35s ease;
+  }
+
+  svg:hover {
+    background: var(--gold);
+  }
+
+  svg:hover path {
+    fill: var(--blue);
+  }
+</style>

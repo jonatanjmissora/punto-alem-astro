@@ -1,0 +1,129 @@
+---
+import { Image } from "astro:assets";
+import fotos from "../constant";
+import FramerReveal from "./FramerReveal.jsx";
+---
+
+<section class="nosotros" id="nosotros">
+  <div class="wrapper">
+    <FramerReveal options={{ from: "left" }}>
+      <div class="text_container">
+        <h3 class="title">Nosotros</h3>
+        <p>
+          Nos dedicamos a la organización de eventos sociales y corporativos,
+          con una trayectoria de más de 20 años de experiencia.
+        </p>
+        <p>
+          Ofrecemos un servicio integral, de calidad y personalizado, respaldado
+          por una organización sólida y comprometida que garantiza seguridad y
+          tranquilidad para que nuestros clientes puedan disfrutar de su evento
+          sin preocuparse por nada.
+        </p>
+        <p>
+          Nos caracterizamos por la búsqueda constante de propuestas
+          innovadoras, poniendo a disposición nuestra creatividad,
+          responsabilidad y experiencia.
+        </p>
+      </div>
+    </FramerReveal>
+
+    <FramerReveal options={{ from: "right" }}>
+      <Image
+        class="image"
+        src={fotos["03"].src}
+        alt={fotos["03"].alt}
+        title={fotos["03"].title}
+        width="1400"
+        height="800"
+      />
+    </FramerReveal>
+  </div>
+</section>
+
+<style>
+  .image {
+    width: auto;
+    height: 55vh;
+  }
+
+  .nosotros {
+    height: calc(100vh - var(--navbar-desktop-height));
+    display: grid;
+    place-items: center;
+  }
+
+  .wrapper {
+    display: flex;
+    /* transform: translateX(3.5rem); */
+    gap: 2rem;
+  }
+  .text_container {
+    font-size: 1rem;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    width: 37dvw;
+    padding: 0 2rem;
+  }
+
+  .text_container .title {
+    font-size: 2rem;
+    font-weight: 500;
+    letter-spacing: 2px;
+    margin-bottom: 1.25rem;
+    line-height: 1.4;
+    color: var(--gold);
+  }
+
+  .text_container p {
+    color: var(--blue);
+    line-height: 2;
+    font-weight: 400;
+    font-size: 1rem;
+  }
+
+  .text_container p + p {
+    margin-top: 1rem;
+  }
+
+  @media (max-width: 760px) {
+    .nosotros {
+      margin-top: 8rem;
+    }
+
+    .wrapper {
+      flex-direction: column;
+      align-items: center;
+      width: 100vw;
+      margin-top: 4rem;
+    }
+
+    .image {
+      width: 100%;
+      height: 40vh;
+    }
+
+    .text_container {
+      width: 90%;
+      margin-bottom: 3rem;
+      padding: 0;
+    }
+    .text_container {
+      width: 90vw;
+      left: 5vw;
+      top: 20%;
+      padding: 2rem;
+    }
+
+    .nosotros .title {
+      font-size: 2rem;
+      /* font-weight: 400; */
+    }
+
+    .nosotros p {
+      font-size: 1.25rem;
+      /* line-height: 1.75; */
+    }
+  }
+</style>
+ ./FramerReveal.jsx

@@ -1,12 +1,11 @@
----
-"use client"
-import {useRef} from "react"
+import {useRef, useEffect} from "react"
 import {useInView} from "framer-motion"
----
-export const FramerReveal = ({children, class, options}) => {
+import "../styles/FramerMotion.css"
 
+
+export const FramerReveal = ({children, className, options}) => {
     const ref = useRef(null)
-    
+
     const amount = options.amount || "100";
     const margin = options.margin || "-100";
     const delay = options.delay || "0";
@@ -19,9 +18,7 @@ export const FramerReveal = ({children, class, options}) => {
         once: true,
         margin: `${margin}px`
     }
-
       )
-
 
     const translate = (from) => {
         if(from === "left") return `translateX(-${amount}px)`
@@ -31,13 +28,12 @@ export const FramerReveal = ({children, class, options}) => {
         if(from === "none") return `translateX(0px)`
     }
     const transition = `all ${duration}s ease ${delay}s`
-
-
+    
     return (
         <>
             {tag === "div" 
                ? (<div
-                class={class}
+                className={className}
                 ref={ref}
                 style={{
                     transform: isInView ? "none" : translate(options.from),
@@ -48,7 +44,7 @@ export const FramerReveal = ({children, class, options}) => {
                 {children}
             </div>)
             : (<header
-                class={class}
+                className={className}
                 ref={ref}
                 style={{
                     transform: isInView ? "none" : translate(options.from),
@@ -63,4 +59,5 @@ export const FramerReveal = ({children, class, options}) => {
             }
         </>
     )
+            
 }

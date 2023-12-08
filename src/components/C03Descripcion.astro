@@ -1,0 +1,132 @@
+---
+import { Image } from "astro:assets";
+import fotos from "../constant";
+import { FramerReveal } from "./FramerReveal";
+---
+
+<section class="description_section">
+  <article class="text_container">
+    <FramerReveal
+      className="description"
+      options={{ from: "bottom", amount: "50", margin: "-30", delay: "0" }}
+      client:visible
+    >
+      <h3 class="description_title">Salón</h3>
+      <p class="description_p">
+        Con una capacidad para 200 invitados, contamos con mesas y sillas
+        Tiffany, vajillas completas, ambientes totalmente climatizados, cuatro
+        livings exteriores, dos pantallas para transmisión del evento.
+      </p>
+    </FramerReveal>
+
+    <FramerReveal
+      className="description"
+      options={{ from: "bottom", amount: "50", margin: "-30", delay: "0.45" }}
+      client:visible
+    >
+      <h3 class="description_title">Logística</h3>
+      <p class="description_p">
+        Brindamos total asesoramiento integral previo al evento. Servicio de
+        atención en salón y personal de limpieza para salón y toilettes.
+        Contamos con servicio de barra de tragos, bartender, cabina de DJ,
+        fotografía 360, latones para bebida y mucho más.
+      </p>
+    </FramerReveal>
+
+    <FramerReveal
+      className="description"
+      options={{ from: "bottom", amount: "50", margin: "-30", delay: "1" }}
+      client:visible
+    >
+      <h3 class="description_title">Patio al aire libre</h3>
+      <p class="description_p">
+        Salón único en su clase, jardines con paisajismo en pleno centro de la
+        ciudad, transformaran cada evento en un momento mágico. Ideal para
+        ceremonias y celebraciones al aire libre.
+      </p>
+    </FramerReveal>
+  </article>
+  <div class="image_container">
+    <Image
+      class="image"
+      src={fotos["02"].src}
+      alt={fotos["02"].alt}
+      title={fotos["02"].title}
+      height="500"
+      width="1000"
+    />
+  </div>
+</section>
+
+<style>
+  .description_section {
+    /* background: white; */
+    padding-top: 5rem;
+    /* background: linear-gradient(to bottom, rgb(253, 253, 255), white); */
+  }
+
+  .text_container {
+    margin: 0 auto;
+    padding: 10rem 0;
+    display: flex;
+    justify-content: center;
+    gap: 3.5rem;
+  }
+
+  .description_title {
+    font-size: 2rem;
+    font-weight: 500;
+    letter-spacing: 2px;
+    margin-bottom: 1.25rem;
+    line-height: 1.4;
+    color: var(--gold);
+  }
+
+  .description_p {
+    color: var(--blue);
+    line-height: 2;
+    font-weight: 400;
+    font-size: 1rem;
+  }
+
+  .image_container {
+    height: 65vh;
+    width: 100vw;
+  }
+
+  .image {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: 0% 25%;
+  }
+
+  @media (max-width: 760px) {
+    .description_section {
+      padding-top: 0;
+    }
+    .text_container {
+      flex-direction: column;
+      align-items: center;
+      gap: 3rem;
+      padding: 4rem 0;
+      width: 100vw;
+    }
+
+    .description_title {
+      font-size: 2rem;
+    }
+
+    .description_p {
+      font-size: 1.25rem;
+    }
+
+    .image_container {
+      height: 40vh;
+    }
+
+    .image {
+      object-position: center;
+    }
+  }
+</style>

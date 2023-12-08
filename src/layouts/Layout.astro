@@ -1,7 +1,5 @@
 ---
-
-import Navbar from "../components/Navbar.astro"
-
+import C01Navbar from "../components/C01Navbar.astro";
 interface Props {
 	title: string;
 }
@@ -27,7 +25,7 @@ const { title } = Astro.props;
 		<title>Punto Alem - Eventos &; Catering</title>
 	</head>
 	<body>
-		<Navbar />
+		<C01Navbar />
 		<slot />
 	</body>
 </html>
@@ -36,26 +34,30 @@ const { title } = Astro.props;
 	@font-face {
 		font-family: "Poppins";
 		font-weight: 300;
-		src: url("/font/poppins-light.woff2") format("woff2"),
-				 url("/font/poppins-light.woff") format("woff")
+		src:
+			url("/font/poppins-light.woff2") format("woff2"),
+			url("/font/poppins-light.woff") format("woff");
 	}
 	@font-face {
 		font-family: "Poppins";
 		font-weight: 400;
-		src: url("/font/poppins-regular.woff2") format("woff2"),
-				 url("/font/poppins-regular.woff") format("woff")
+		src:
+			url("/font/poppins-regular.woff2") format("woff2"),
+			url("/font/poppins-regular.woff") format("woff");
 	}
 	@font-face {
 		font-family: "Poppins";
 		font-weight: 500;
-		src: url("/font/poppins-medium.woff2") format("woff2"),
-				 url("/font/poppins-medium.woff") format("woff")
+		src:
+			url("/font/poppins-medium.woff2") format("woff2"),
+			url("/font/poppins-medium.woff") format("woff");
 	}
 	@font-face {
 		font-family: "Poppins";
 		font-weight: 700;
-		src: url("/font/poppins-bold.woff2") format("woff2"),
-				 url("/font/poppins-bold.woff") format("woff")
+		src:
+			url("/font/poppins-bold.woff2") format("woff2"),
+			url("/font/poppins-bold.woff") format("woff");
 	}
 
 	:root {

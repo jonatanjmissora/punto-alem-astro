@@ -1,0 +1,46 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 6.5rem;
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  height: var(--navbar-desktop-height);
+  z-index: 1000;
+  background: var(--blue);
+}
+
+.logo_container {
+  height: 13vw;
+  width: auto;
+}
+
+.footer {
+  font-weight: 500;
+  color: var(--blue);
+  margin-top: 0.5rem;
+}
+
+.description {
+  width: 90%;
+  padding: 2rem 0;
+}
+
+@media (max-width: 1400px) {
+  .logo_container {
+    height: 12vw;
+  }
+}
+
+@media (max-width: 760px) {
+  .header {
+    padding: 2rem 3rem;
+  }
+
+  .logo_container {
+    height: 40vw;
+    height: 40svw;
+    width: 100vw;
+  }
+}

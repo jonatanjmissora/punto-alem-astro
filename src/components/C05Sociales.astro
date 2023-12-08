@@ -1,0 +1,114 @@
+---
+import { Image } from "astro:assets";
+import fotos from "../constant";
+import { FramerReveal } from "./FramerReveal";
+---
+
+<section class="sociales" id="sociales">
+  <div class="image_container">
+    <Image
+      class="image"
+      src={fotos["04"].src}
+      alt={fotos["04"].alt}
+      title={fotos["04"].title}
+      width="1400"
+      height="800"
+    />
+  </div>
+  <!-- <FramerReveal options={{ from: "right" }}> -->
+  <div class="text_container">
+    <h3 class="title">Sociales</h3>
+    <p>
+      Punto Alem es el lugar para vivir tu evento soñado. Podrás disfrutar de
+      las más variadas celebraciones: desde casamientos, fiestas de quince hasta
+      Bar Mitzvah, aniversarios, cumpleaños. Cualquier evento se convierte en un
+      momento lleno de magia.
+    </p>
+    <p>
+      El jardín te ofrece un espacio al aire libre y natural, donde podrás
+      respirar aire fresco y disfrutar del verde. Árboles, plantas y luces crean
+      un ambiente mágico, que hará que tu evento sea inolvidable y muy especial.
+      Ademá contamos con un ambiente especial ambientado para celebrar bodas.
+    </p>
+  </div>
+  <!-- </FramerReveal> -->
+</section>
+
+<style>
+  .sociales {
+    position: relative;
+    height: calc(100vh - var(--navbar-desktop-height));
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+  .text_container {
+    font-size: 1rem;
+    position: absolute;
+    margin-right: 10rem;
+    width: 40dvw;
+    padding: 2rem 4rem;
+    z-index: 10;
+  }
+
+  .text_container::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background: var(--gold);
+    opacity: 0.85;
+  }
+
+  .text_container .title {
+    font-size: 2rem;
+    font-weight: 500;
+    letter-spacing: 2px;
+    margin-bottom: 1.25rem;
+    color: white;
+    line-height: 1.4;
+  }
+
+  .text_container p {
+    color: white;
+    line-height: 2;
+    font-weight: 400;
+    font-size: 1rem;
+  }
+
+  .text_container p + p {
+    margin-top: 1rem;
+  }
+
+  .image_container {
+    height: calc(100vh - var(--navbar-desktop-height));
+    width: 100vw;
+  }
+
+  .image {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: bottom;
+  }
+
+  @media (max-width: 760px) {
+    .sociales {
+      margin-top: 30rem;
+    }
+    .sociales .title {
+      font-size: 2rem;
+      /* font-weight: 400; */
+    }
+
+    .sociales p {
+      font-size: 1.25rem;
+      /* line-height: 1.75; */
+    }
+  }
+</style>
+ ./FramerReveal.jsx
