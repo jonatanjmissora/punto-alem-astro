@@ -11,12 +11,15 @@ import { FramerReveal } from "./FramerReveal";
       src={fotos["04"].src}
       alt={fotos["04"].alt}
       title={fotos["04"].title}
-      width="1400"
+      width="1000"
       height="800"
     />
   </div>
-  <!-- <FramerReveal options={{ from: "right" }}> -->
-  <div class="text_container">
+  <FramerReveal
+    className="sociales_text_container"
+    options={{ from: "right" }}
+    client:visible
+  >
     <h3 class="title">Sociales</h3>
     <p>
       Punto Alem es el lugar para vivir tu evento soñado. Podrás disfrutar de
@@ -30,8 +33,7 @@ import { FramerReveal } from "./FramerReveal";
       un ambiente mágico, que hará que tu evento sea inolvidable y muy especial.
       Ademá contamos con un ambiente especial ambientado para celebrar bodas.
     </p>
-  </div>
-  <!-- </FramerReveal> -->
+  </FramerReveal>
 </section>
 
 <style>
@@ -43,28 +45,7 @@ import { FramerReveal } from "./FramerReveal";
     align-items: center;
   }
 
-  .text_container {
-    font-size: 1rem;
-    position: absolute;
-    margin-right: 10rem;
-    width: 40dvw;
-    padding: 2rem 4rem;
-    z-index: 10;
-  }
-
-  .text_container::before {
-    position: absolute;
-    content: "";
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-    background: var(--gold);
-    opacity: 0.85;
-  }
-
-  .text_container .title {
+  .title {
     font-size: 2rem;
     font-weight: 500;
     letter-spacing: 2px;
@@ -73,14 +54,14 @@ import { FramerReveal } from "./FramerReveal";
     line-height: 1.4;
   }
 
-  .text_container p {
+  p {
     color: white;
     line-height: 2;
     font-weight: 400;
     font-size: 1rem;
   }
 
-  .text_container p + p {
+  p + p {
     margin-top: 1rem;
   }
 
@@ -100,6 +81,14 @@ import { FramerReveal } from "./FramerReveal";
     .sociales {
       margin-top: 30rem;
     }
+
+    .text_container {
+      width: 90vw;
+      left: 5vw;
+      top: 20%;
+      padding: 2rem;
+    }
+
     .sociales .title {
       font-size: 2rem;
       /* font-weight: 400; */
@@ -111,4 +100,3 @@ import { FramerReveal } from "./FramerReveal";
     }
   }
 </style>
- ./FramerReveal.jsx

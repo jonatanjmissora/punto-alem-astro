@@ -1,0 +1,36 @@
+---
+import { Image } from "astro:assets";
+import fotos from "../constant";
+import { FramerReveal } from "./FramerReveal";
+import {ContactForm} from "./ContactForm";
+---
+
+<section id="contacto">
+
+  <Image 
+    class="image" 
+    src={fotos["12"].src} 
+    alt={fotos["12"].alt}
+    title={fotos["12"].title}
+    width=1000
+    height=800
+  />
+
+  <ContactForm />
+
+</section>
+
+<style>
+  #contacto {
+  position: relative;
+  margin-top: 10rem;
+  height: calc(100vh - var(--navbar-desktop-height));
+  width: 100vw;
+}
+
+.image {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+</style>

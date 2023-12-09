@@ -1,0 +1,168 @@
+---
+import { Image } from "astro:assets";
+import fotos from "../constant";
+import { FramerReveal } from "./FramerReveal";
+---
+
+<section>
+  <div class="row">
+    <FramerReveal
+      className=""
+      options={{from: "left"}}
+      client:visible
+    >
+      <div class="image_row_container">
+
+      <Image 
+        class="image_row" 
+        src={fotos["09"].src} 
+        alt={fotos["09"].alt}
+        title={fotos["09"].title} 
+        width=1000
+        height=800
+        />
+        </div>
+    </FramerReveal>
+    <FramerReveal
+      className="frase_container"
+      options={{from: "right"}}
+      client:visible
+    >
+      <h2 class="frase">DISTINCIÓN</h2>
+    </FramerReveal>  
+  </div>
+
+   <div class="row">
+    <FramerReveal
+        className="frase_container"
+        options={{from: "left"}}
+        client:visible
+    >
+      <h2 class="frase">ESTILO</h2>
+    </FramerReveal>
+    <FramerReveal
+      className=""
+      options={{from: "right"}}
+      client:visible
+    >
+      <div class="image_row_container">
+      <Image 
+        class="image_row" 
+        src={fotos["10"].src} 
+        alt={fotos["10"].alt}
+        title={fotos["10"].title}
+        width=1000
+        height=800
+      />
+      </div>
+    </FramerReveal>
+  </div>
+
+  <div class="row">
+    <FramerReveal
+      className=""
+      options={{from: "left"}}
+      client:visible
+    > 
+      <div class="image_row_container">
+      <Image 
+        class="image_row" 
+        src={fotos["11"].src} 
+        alt={fotos["11"].alt}
+        title={fotos["11"].title}
+        width=1000
+        height=800
+      />
+        </div>
+    </FramerReveal>
+    <FramerReveal
+      className="frase_container"
+      options={{from: "right"}}
+      client:visible
+    >
+      <h2 class="frase">ELABORACIÓN</h2>
+    </FramerReveal>
+  </div>
+</section>
+
+<style>
+  .row {
+  display: flex;
+  justify-content: flex-end;
+  height: 50vh;
+  height: 50dvh;
+  width: 100vw;
+  overflow: hidden;
+  position: relative;
+}
+
+.row:first-of-type,
+.row:last-of-type {
+  justify-content: flex-start;
+}
+
+.image_row_container {
+  height: 55vh;
+  width: 50vw;
+}
+
+.image_row {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+}
+
+.image_row:last-of-type {
+  object-position: 0% 60%;
+}
+
+.row .frase {
+  width: 50vw;
+  line-height: 50dvh;
+  font-size: 4rem;
+  font-weight: 300;
+  color: var(--gold);
+  text-align: center;
+  z-index: 2;
+}
+
+/////
+@media (max-width: 760px) {
+.row {
+    margin: 0.5rem 0;
+    height: 35vh;
+  }
+
+  .row:first-of-type {
+    margin-top: 10rem;
+  }
+
+  .image_row_container {
+    height: 100%;
+    width: 100vw;
+  }
+
+  .image_row {
+    height: 100%;
+    object-fit: cover;
+    object-position: bottom;
+  }
+
+  .row .frase_container {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100vw;
+  }
+
+  .row .frase {
+    bottom: 3rem;
+    background: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    font-size: 3rem;
+    line-height: 3rem;
+    padding: 1rem;
+  }
+}
+
+</style>

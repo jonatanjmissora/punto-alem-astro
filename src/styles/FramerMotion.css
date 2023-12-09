@@ -1,3 +1,4 @@
+/*  NAVBAR    */
 .header {
   display: flex;
   justify-content: space-between;
@@ -11,6 +12,7 @@
   background: var(--blue);
 }
 
+/*  HERO    */
 .logo_container {
   height: 13vw;
   width: auto;
@@ -22,9 +24,96 @@
   margin-top: 0.5rem;
 }
 
+/*  DESCRIPCION   */
 .description {
   width: 90%;
   padding: 2rem 0;
+}
+
+/*  NOSTROS   */
+.nosotros_text_container {
+  font-size: 1rem;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  width: 37dvw;
+  padding: 0 2rem;
+}
+
+/*  SOCIALES   */
+.sociales_text_container {
+  font-size: 1rem;
+  position: absolute;
+  margin-right: 10rem;
+  width: 40dvw;
+  padding: 2rem 4rem;
+  z-index: 10;
+}
+
+.sociales_text_container::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background: var(--gold);
+  opacity: 0.85;
+}
+
+/*  CORPORATIVOS  */
+.corporativos_text_container {
+  font-size: 1rem;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  width: 37dvw;
+  padding: 0 2rem;
+}
+
+/*  EXCLUSIVOS  */
+.exclusivos_text_container {
+  font-size: 1rem;
+  text-align: left;
+  position: absolute;
+  z-index: 10;
+  width: 40dvw;
+  padding: 2rem 4rem;
+  margin-right: 10rem;
+}
+
+.exclusivos_text_container::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background: var(--gold);
+  opacity: 0.85;
+}
+
+/*  CATERING  */
+.catering_text_container {
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  width: 35dvw;
+}
+
+.catering_image_container {
+  width: 49vw;
+  height: 75vh;
+}
+
+/*  CONTACTO DATA  */
+.contacto_data_item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
 }
 
 @media (max-width: 1400px) {

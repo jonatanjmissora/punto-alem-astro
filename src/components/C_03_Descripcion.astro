@@ -5,14 +5,14 @@ import { FramerReveal } from "./FramerReveal";
 ---
 
 <section class="description_section">
-  <article class="text_container">
+  <article class="description_text_container">
     <FramerReveal
       className="description"
       options={{ from: "bottom", amount: "50", margin: "-30", delay: "0" }}
       client:visible
     >
-      <h3 class="description_title">Salón</h3>
-      <p class="description_p">
+      <h3 class="title">Salón</h3>
+      <p>
         Con una capacidad para 200 invitados, contamos con mesas y sillas
         Tiffany, vajillas completas, ambientes totalmente climatizados, cuatro
         livings exteriores, dos pantallas para transmisión del evento.
@@ -24,8 +24,8 @@ import { FramerReveal } from "./FramerReveal";
       options={{ from: "bottom", amount: "50", margin: "-30", delay: "0.45" }}
       client:visible
     >
-      <h3 class="description_title">Logística</h3>
-      <p class="description_p">
+      <h3 class="title">Logística</h3>
+      <p>
         Brindamos total asesoramiento integral previo al evento. Servicio de
         atención en salón y personal de limpieza para salón y toilettes.
         Contamos con servicio de barra de tragos, bartender, cabina de DJ,
@@ -38,8 +38,8 @@ import { FramerReveal } from "./FramerReveal";
       options={{ from: "bottom", amount: "50", margin: "-30", delay: "1" }}
       client:visible
     >
-      <h3 class="description_title">Patio al aire libre</h3>
-      <p class="description_p">
+      <h3 class="title">Patio al aire libre</h3>
+      <p>
         Salón único en su clase, jardines con paisajismo en pleno centro de la
         ciudad, transformaran cada evento en un momento mágico. Ideal para
         ceremonias y celebraciones al aire libre.
@@ -65,7 +65,7 @@ import { FramerReveal } from "./FramerReveal";
     /* background: linear-gradient(to bottom, rgb(253, 253, 255), white); */
   }
 
-  .text_container {
+  .description_text_container {
     margin: 0 auto;
     padding: 10rem 0;
     display: flex;
@@ -73,7 +73,7 @@ import { FramerReveal } from "./FramerReveal";
     gap: 3.5rem;
   }
 
-  .description_title {
+  .title {
     font-size: 2rem;
     font-weight: 500;
     letter-spacing: 2px;
@@ -82,7 +82,7 @@ import { FramerReveal } from "./FramerReveal";
     color: var(--gold);
   }
 
-  .description_p {
+  p {
     color: var(--blue);
     line-height: 2;
     font-weight: 400;

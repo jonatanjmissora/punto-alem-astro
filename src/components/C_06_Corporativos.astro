@@ -1,0 +1,107 @@
+---
+import { Image } from "astro:assets";
+import fotos from "../constant";
+import { FramerReveal } from "./FramerReveal";
+---
+
+<section class="corporativos" id="corporativos">
+  <div class="wrapper">
+    <FramerReveal
+        className=""
+        options={{from: "left"}}
+        client:visible
+    >
+      <Image 
+        class="image"
+        src={fotos["05"].src} 
+        alt={fotos["05"].alt}
+        title={fotos["05"].title}
+        width=1000
+        height=800
+      />
+    </FramerReveal>
+    <FramerReveal 
+      class="corporativos_text_container"
+      options={{from: "right"}}
+      client:visible
+    >
+      <h3 class="title">Corporativos</h3>
+      <p>Si quieres organizar un evento corporativo exitoso, nuestro salón te ofrece el tamaño ideal, dónde podrás realizar fiestas de fin de año, jornadas de trabajo, congresos o exhibiciones de producto, recepciones, etc.</p>
+      <p>El salón cuenta con pantallas gigantes, sonido profesional, conexión a internet y otros servicios que harán que tu evento sea de calidad. Además, tenemos  un equipo de profesionales que te asesorará y te ayudará en todo lo que necesites.</p>
+    </FramerReveal>
+  </div>
+</section>
+
+<style>
+.corporativos {
+  display: grid;
+  place-items: center;
+  height: calc(100vh - var(--navbar-desktop-height));
+}
+
+.wrapper {
+  display: flex;
+  /* transform: translateX(3.5rem); */
+  gap: 2rem;
+}
+
+.title {
+  font-size: 2rem;
+  font-weight: 500;
+  letter-spacing: 2px;
+  margin-bottom: 1.25rem;
+  line-height: 1.4;
+  color: var(--gold);
+}
+
+p {
+  color: var(--blue);
+  line-height: 2;
+  font-weight: 400;
+  font-size: 1rem;
+}
+
+p+p {
+  margin-top: 1rem;
+}
+
+.image {
+  width: 35vw;
+  height: 55vh;
+  object-fit: cover;
+}
+
+@media (max-width: 760px) {
+  .corporativos {
+    margin-top: 8rem;
+  }
+
+  .wrapper {
+    padding-top: 4rem;
+    flex-direction: column-reverse;
+    align-items: center;
+    transform: translateX(0);
+    width: 100vw;
+  }
+
+  .text_container {
+    width: 90%;
+    margin-bottom: 3rem;
+    padding: 0;
+  }
+
+  .corporativos .title {
+    font-size: 2rem;
+  }
+
+  .corporativos p {
+    font-size: 1.25rem;
+  }
+
+  .image {
+    width: 100vw;
+    height: 55vh;
+    object-fit: cover;
+  }
+}
+</style>

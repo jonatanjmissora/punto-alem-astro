@@ -1,5 +1,6 @@
 ---
-import C01Navbar from "../components/C01Navbar.astro";
+import C_01_Navbar from "../components/C_01_Navbar.astro";
+import C_10_Footer from "../components/C_10_Footer.astro";
 interface Props {
 	title: string;
 }
@@ -25,8 +26,9 @@ const { title } = Astro.props;
 		<title>Punto Alem - Eventos &; Catering</title>
 	</head>
 	<body>
-		<C01Navbar />
+		<C_01_Navbar />
 		<slot />
+		<C_10_Footer />
 	</body>
 </html>
 
