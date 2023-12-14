@@ -26,8 +26,7 @@
 
 /*  DESCRIPCION   */
 .description {
-  width: 90%;
-  padding: 2rem 0;
+  width: 26dvw;
 }
 
 /*  NOSTROS   */
@@ -123,6 +122,8 @@
 }
 
 @media (max-width: 760px) {
+
+  /*  NAVBAR  */
   .header {
     padding: 2rem 3rem;
   }
@@ -131,5 +132,11 @@
     height: 40vw;
     height: 40svw;
     width: 100vw;
+  }
+
+  /*  DESCRIPTION  */
+  .description {
+    width: 90%;
+    padding: 2rem 0;
   }
 }

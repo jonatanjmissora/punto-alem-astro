@@ -8,21 +8,19 @@ import MailSvg from "../assets/svg/MailSvg.astro";
 import FacebookSvg from "../assets/svg/FacebookSvg.astro";
 import InstagramSvg from "../assets/svg/InstagramSvg.astro";
 
-const datas = {}
-
+const datas = {};
 ---
 
 <section class="section_data">
-
   <FramerReveal
     className="contacto_data_item"
-    options={{from: "bottom", amount:"60", margin: "-20", delay: "0"}}
+    options={{ from: "bottom", amount: "60", margin: "-20", delay: "0" }}
     client:visible
   >
-    <a 
+    <a
       class="icon"
-      href="https://maps.app.goo.gl/FuTkt3hptixiTBSw5" 
-      title="maps_location" 
+      href="https://maps.app.goo.gl/FuTkt3hptixiTBSw5"
+      title="maps_location"
       target="_blank"
     >
       <MapPinSvg />
@@ -37,13 +35,13 @@ const datas = {}
 
   <FramerReveal
     className="contacto_data_item"
-    options={{from: "bottom", amount:"60", margin: "-20", delay: "0.25"}}
+    options={{ from: "bottom", amount: "60", margin: "-20", delay: "0.25" }}
     client:visible
   >
-    <a 
-      class="icon" 
-      href="https://wa.me/+5492914054505" 
-      title="maps_location" 
+    <a
+      class="icon"
+      href="https://wa.me/+5492914054505"
+      title="maps_location"
       target="_blank"
     >
       <PhoneSvg />
@@ -51,10 +49,11 @@ const datas = {}
     <h3 class="title">Llamanos</h3>
     <div>
       <p>
-        <a 
-        href="https://wa.me/+5492914054505" 
-        title="maps_location" 
-        target="_blank"
+        <a
+          class="link"
+          href="https://wa.me/+5492914054505"
+          title="maps_location"
+          target="_blank"
         >
           291 - 4054505
         </a>
@@ -64,13 +63,13 @@ const datas = {}
 
   <FramerReveal
     className="contacto_data_item"
-    options={{from: "bottom", amount:"60", margin: "-20", delay: "0.5"}}
+    options={{ from: "bottom", amount: "60", margin: "-20", delay: "0.5" }}
     client:visible
   >
-    <a 
-      class="mail_icon" 
-      href="https://mail.google.com/mail/u/0/?fs=1&to=info@puntoalemeventos.com&su=&body=&bcc=&tf=cm" 
-      title="maps_location" 
+    <a
+      class="mail_icon"
+      href="https://mail.google.com/mail/u/0/?fs=1&to=info@puntoalemeventos.com&su=&body=&bcc=&tf=cm"
+      title="maps_location"
       target="_blank"
     >
       <MailSvg />
@@ -78,9 +77,10 @@ const datas = {}
     <h3 class="title">Escribinos</h3>
     <div>
       <p>
-        <a 
+        <a
+          class="link"
           href="https://mail.google.com/mail/u/0/?fs=1&to=info@puntoalemeventos.com&su=&body=&bcc=&tf=cm"
-          target="_blank" 
+          target="_blank"
           title="mail_de_la_empresa"
         >
           info@puntoalemeventos.com
@@ -91,22 +91,22 @@ const datas = {}
 
   <FramerReveal
     className="contacto_data_item"
-    options={{from: "bottom", amount:"60", margin: "-20", delay: "0.75"}}
+    options={{ from: "bottom", amount: "60", margin: "-20", delay: "0.75" }}
     client:visible
   >
     <div class="socials">
-      <a 
+      <a
         class="icon"
-        href="https://www.instagram.com/punto.alem/" 
-        title="maps_location" 
+        href="https://www.instagram.com/punto.alem/"
+        title="maps_location"
         target="_blank"
       >
         <InstagramSvg />
       </a>
-      <a 
-        class="icon" 
-        href="https://www.facebook.com/Puntoalemeventos" 
-        title="maps_location" 
+      <a
+        class="icon"
+        href="https://www.facebook.com/Puntoalemeventos"
+        title="maps_location"
         target="_blank"
       >
         <FacebookSvg />
@@ -115,9 +115,10 @@ const datas = {}
     <h3 class="title">Seguinos</h3>
     <div>
       <p>
-        <a 
-          href="https://www.instagram.com/punto.alem/" 
-          target="_blank" 
+        <a
+          class="link"
+          href="https://www.instagram.com/punto.alem/"
+          target="_blank"
           title="instagram_de_la_empresa"
         >
           /punto.alem
@@ -125,9 +126,10 @@ const datas = {}
       </p>
 
       <p>
-        <a 
-          href="https://www.facebook.com/Puntoalemeventos" 
-          target="_blank" 
+        <a
+          class="link"
+          href="https://www.facebook.com/Puntoalemeventos"
+          target="_blank"
           title="facebook_de_la_empresa"
         >
           /Puntoalemeventos
@@ -135,7 +137,6 @@ const datas = {}
       </p>
     </div>
   </FramerReveal>
-
 </section>
 
 <style>
@@ -147,42 +148,42 @@ const datas = {}
     color: var(--blue);
   }
   .icon {
-    width: 3.75rem;
+    /* width: 3.75rem; */
     height: 3.5rem;
-    display: grid;
-    place-items: center;
+    /* display: grid;
+    place-items: center; */
   }
   .mail_icon {
-    width: 3.75rem;
+    width: 4.25rem;
     height: 3.5rem;
-    display: grid;
-    place-items: center;
     padding: 0.25rem 0;
   }
   .socials {
     display: flex;
-}
-.title {
-  font-size: 2rem;
-  font-weight: 400;
-  color: var(--gold);
-}
+  }
+  .title {
+    font-size: 2rem;
+    font-weight: 400;
+    color: var(--gold);
+  }
 
-p {
-  text-align: center;
-  font-weight: 400;
-  line-height: 2;
-  font-size: 1rem;
-}
+  p {
+    text-align: center;
+    font-weight: 400;
+    line-height: 2;
+    font-size: 1rem;
+  }
 
-a {
-  padding: 0 0.5rem;
-  transition: color 0.35s ease, background 0.35s ease;
-  border-radius: 1rem;
-}
+  a {
+    padding: 0 0.5rem;
+    transition:
+      color 0.35s ease,
+      background 0.35s ease;
+    border-radius: 1rem;
+  }
 
-a:hover {
-  background: var(--blue);
-  color: var(--light-gold);
-}
+  .link:hover {
+    background: var(--blue);
+    color: var(--light-gold);
+  }
 </style>
